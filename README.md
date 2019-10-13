@@ -7,7 +7,7 @@ Este projeto é um simples CRUD de cadastro de horas de trabalho.
 Clone o projeto:
 
 ```
-git clone [url]
+git clone https://github.com/gusthavosantana/app-horas.git
 ```
 
 ### backend
