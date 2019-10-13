@@ -1,0 +1,11 @@
+{
+  "name": "dbhours",
+  "connector": "mongodb",
+  "url": "mongodb+srv://brintell:jNuznOGKqtu5IzNA@brintell-challenger-buims.mongodb.net/test?retryWrites=true&w=majority",
+  "host": "brintell-challenger-buims.mongodb.net",
+  "port": 80,
+  "user": "brintell",
+  "password": "jNuznOGKqtu5IzNA",
+  "database": "test",
+  "useNewUrlParser": true
+}
