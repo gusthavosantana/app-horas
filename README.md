@@ -35,4 +35,4 @@ yarn start
 
 ## Authors
 
-- **Gusthavo Santana** - [Gusthavo](https://github.com/gusthavosantana)
+- **Gusthavo Santana** - [Repositório](https://github.com/gusthavosantana)
