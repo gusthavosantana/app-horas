@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { Link } from 'react-router-dom'
+import PropTypes from 'prop-types';
 import { remove, update, findAll } from '../../actions/hour';
 
 /**
@@ -11,7 +12,7 @@ import { remove, update, findAll } from '../../actions/hour';
 function List(props) {
     
     return props.hours.length ? (
-        <table class="table">
+        <table className="table">
             <thead>
                 <tr>
                     <th scope="col">#</th>
@@ -45,5 +46,15 @@ function List(props) {
 
 const mapStateToProps = store => ({ hours: store.hour.items });
 const mapDispatchToProps = dispatch => bindActionCreators({ remove, update, findAll }, dispatch);
+
+List.propTypes = {
+    hours: PropTypes.arrayOf(
+        PropTypes.shape({
+            id: PropTypes.string,
+            start: PropTypes.string,
+            end: PropTypes.string
+        })
+    )
+};
 
 export default connect(mapStateToProps, mapDispatchToProps)(List);

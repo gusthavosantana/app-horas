@@ -2,10 +2,11 @@ import React, { useState, useEffect } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { useHistory } from "react-router-dom";
+import PropTypes from 'prop-types';
 
 import { add, update } from '../../actions/hour';
 
-/**
+/** 
  * Componente de Formulário de cadastro/alteração de horas
  * @param {*} props 
  */
@@ -61,5 +62,9 @@ function Form(props) {
 
 const mapStateToProps = store => ({ hours: store.hour.items });
 const mapDispatchToProps = dispatch => bindActionCreators({ add, update }, dispatch);
+
+Form.propTypes = {
+    hourId: PropTypes.string
+};
 
 export default connect(mapStateToProps, mapDispatchToProps)(Form);
